@@ -1,5 +1,14 @@
 package com.ceiba.biblioteca.infraestructura.persistencia.repositorio;
 
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
+
 import com.ceiba.biblioteca.dominio.Libro;
 import com.ceiba.biblioteca.dominio.Prestamo;
 import com.ceiba.biblioteca.dominio.repositorio.RepositorioLibro;
@@ -8,15 +17,15 @@ import com.ceiba.biblioteca.infraestructura.persistencia.builder.LibroBuilder;
 import com.ceiba.biblioteca.infraestructura.persistencia.entidad.LibroEntity;
 import com.ceiba.biblioteca.infraestructura.persistencia.entidad.PrestamoEntity;
 import com.ceiba.biblioteca.infraestructura.persistencia.repositorio.jpa.RepositorioLibroJPA;
-import org.springframework.stereotype.Repository;
-
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import java.util.List;
 
 @Repository
 public class RepositorioPrestamoPersistente implements RepositorioPrestamo {
-
+	
+	/**
+	 * Atributo para el manejo del logger
+	 */
+	private static Logger logger = LoggerFactory.getLogger(RepositorioPrestamoPersistente.class.getName());
+	
     private static final String ISBN = "isbn";
     private static final String PRESTAMO_FIND_BY_ISBN = "Prestamo.findByIsbn";
 
@@ -57,28 +66,48 @@ public class RepositorioPrestamoPersistente implements RepositorioPrestamo {
         return !resultList.isEmpty() ? (PrestamoEntity) resultList.get(0) : null;
     }
 
-    private PrestamoEntity buildPrestamoEntity(Prestamo prestamo) {
+    /**
+   	 * Método encargado de realizar la conversion de la estructura DTO <code>Prestamo</code>
+   	 * al domino <code>PrestamoEntity</code> para ser manejada
+   	 * 
+   	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+   	 * 
+   	 * @author hhernandez
+   	 * 
+   	 * @param prestamo
+   	 * 			<code>Prestamo</code>
+   	 * 			El prestamo a convertir en entidad
+   	 * 
+   	 * @return <code>PrestamoEntity</code>
+   	 * 			La entidad prestamo creada
+     */
+	private PrestamoEntity buildPrestamoEntity(Prestamo prestamo) {
+		logger.debug("Inicio método buildPrestamoEntity");
+		String mensajeFinalizacion = "Fin método buildPrestamoEntity";
 
-        LibroEntity libroEntity = repositorioLibroJPA.obtenerLibroEntityPorIsbn(prestamo.getLibro().getIsbn());
+		LibroEntity libroEntity = repositorioLibroJPA.obtenerLibroEntityPorIsbn(prestamo.getLibro().getIsbn());
 
-        PrestamoEntity prestamoEntity = new PrestamoEntity();
-        prestamoEntity.setLibro(libroEntity);
-        prestamoEntity.setFechaSolicitud(prestamo.getFechaSolicitud());
+		PrestamoEntity prestamoEntity = new PrestamoEntity();
+		prestamoEntity.setNombreUsuario(prestamo.getNombreUsuario());
+		prestamoEntity.setFechaEntregaMaxima(prestamo.getFechaEntregaMaxima());
+		prestamoEntity.setLibro(libroEntity);
+		prestamoEntity.setFechaSolicitud(prestamo.getFechaSolicitud());
 
-        return prestamoEntity;
-    }
+		logger.debug(mensajeFinalizacion);
+		return prestamoEntity;
+	}
 
-    @Override
-    public Prestamo obtener(String isbn) {
+	@Override
+	public Prestamo obtener(String isbn) {
 
-        PrestamoEntity prestamoEntity = obtenerPrestamoEntityPorIsbn(isbn);
+		PrestamoEntity prestamoEntity = obtenerPrestamoEntityPorIsbn(isbn);
 
-        if (prestamoEntity == null) {
-            return null;
-        }
+		if (prestamoEntity == null) {
+			return null;
+		}
 
-        return new Prestamo(prestamoEntity.getFechaSolicitud(),
-                LibroBuilder.convertirADominio(prestamoEntity.getLibro()), prestamoEntity.getFechaEntregaMaxima(),
-                prestamoEntity.getNombreUsuario());
-    }
+		return new Prestamo(prestamoEntity.getFechaSolicitud(),
+				LibroBuilder.convertirADominio(prestamoEntity.getLibro()), prestamoEntity.getFechaEntregaMaxima(),
+				prestamoEntity.getNombreUsuario());
+	}
 }

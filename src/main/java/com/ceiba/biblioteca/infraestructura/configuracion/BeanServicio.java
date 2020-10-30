@@ -1,5 +1,6 @@
 package com.ceiba.biblioteca.infraestructura.configuracion;
 
+import com.ceiba.biblioteca.dominio.repositorio.RepositorioFestivo;
 import com.ceiba.biblioteca.dominio.repositorio.RepositorioLibro;
 import com.ceiba.biblioteca.dominio.repositorio.RepositorioPrestamo;
 import com.ceiba.biblioteca.dominio.servicio.bibliotecario.ServicioBibliotecario;
@@ -10,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class BeanServicio {
 
     @Bean
-    public ServicioBibliotecario servicioCrearUsuario2(RepositorioLibro repositorioLibro, RepositorioPrestamo repositorioPrestamo) {
-        return new ServicioBibliotecario(repositorioLibro, repositorioPrestamo);
+    public ServicioBibliotecario servicioCrearUsuario2(RepositorioLibro repositorioLibro, RepositorioPrestamo repositorioPrestamo, RepositorioFestivo repositorioFestivo) {
+        return new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
     }
 }

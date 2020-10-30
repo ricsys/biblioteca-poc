@@ -1,28 +1,39 @@
 package com.ceiba.biblioteca.aplicacion.comando;
 
+import java.io.Serializable;
 
-public class ComandoLibro {
+public class ComandoLibro implements Serializable {
 
-    private final String isbn;
-    private final String titulo;
-    private final int anio;
+	/**
+	 * Atributo que determina identificador único para versión serial
+	 */
+	private static final long serialVersionUID = 1085683782861543733L;
 
-    public ComandoLibro(String isbn, String titulo, int anio) {
-        this.isbn = isbn;
-        this.titulo = titulo;
-        this.anio = anio;
-    }
+	private String isbn;
+	
+	private String titulo;
+	
+	private int anio;
 
-    public String getIsbn() {
-        return isbn;
-    }
+	public ComandoLibro() {
+		super();
+	}
 
-    public String getTitulo() {
-        return titulo;
-    }
+	public ComandoLibro(String isbn, String titulo, int anio) {
+		this.isbn = isbn;
+		this.titulo = titulo;
+		this.anio = anio;
+	}
 
-    public int getAnio() {
-        return anio;
-    }
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public int getAnio() {
+		return anio;
+	}
 }
-

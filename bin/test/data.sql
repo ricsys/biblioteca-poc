@@ -18,3 +18,57 @@ VALUES (15, 'DDD', 'PD5121', 2021);
 
 INSERT INTO prestamo(ID, ID_LIBRO, FECHA_SOLICITUD, FECHA_ENTREGA_MAXIMA, NOMBRE_USUARIO)
 VALUES (100, 10, NULL, NULL, 'PEDRO');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES 
+(1,'Año Nuevo','2020-01-01');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(2,'Dia de los Reyes Magos','2020-01-06');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(3,'Dia de San Jose','2020-03-23');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(4,'Jueves Santo','2020-04-09');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(5,'Viernes Santo','2020-04-10');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(6,'Dia del Trabajo','2020-05-01');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(7,'Dia de la Ascension','2020-05-25');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(8,'Corpus Christi','2020-06-15');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(9,'Sagrado Corazon','2020-06-22');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(10,'San Pedro y San Pablo - Sagrado corazon','2020-06-29');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(11,'Dia de la Independencia','2020-07-20');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(12,'Batalla de Boyacá','2020-08-07');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(13,'Festivo por la Asunción de la Virgen','2020-08-17');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(14,'Festivo por el Día de la Raza	','2020-10-12');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(15,'Festivo por el día de todos los Santos','2020-11-02');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(16,'Festivo por la Independencia de Cartagena','2020-11-16');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(17,'Inmaculada Concepción','2020-12-08');
+
+INSERT INTO festivo (ID, CONCEPTO, FECHA) VALUES
+(18,'Navidad','2020-12-25');
