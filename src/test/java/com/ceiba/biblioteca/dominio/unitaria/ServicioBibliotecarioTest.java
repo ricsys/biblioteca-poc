@@ -4,6 +4,8 @@ package com.ceiba.biblioteca.dominio.unitaria;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -128,9 +130,8 @@ public class ServicioBibliotecarioTest {
         RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
         RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
 
-        when(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn())).thenReturn(null);
-
         ServicioBibliotecario servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
+    	doReturn(null).when(repositorioPrestamo).obtenerLibroPrestadoPorIsbn(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
 
         // act
         boolean existeProducto = servicioBibliotecario.libroEsPrestado(libro.getIsbn());
@@ -139,51 +140,7 @@ public class ServicioBibliotecarioTest {
         assertFalse(existeProducto);
     }
     
-    /**
-	 * Método encargado de ejecutar la prueba unitaria de la implementación 
-	 * que realiza el proceso de prestamo de libros para 
-	 * el sistema de biblioteca
-	 * 
-	 * En este Test: Se realiza la creacion de un nuevo libro y posteriormente 
-	 * se crea el prestamo del mismo.
-	 * 
-	 * Resultado esperado: Que se valide si el libro se encuentre efectivamente 
-	 * prestado 
-	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
-	 * 
-	 * @author hhernandez
-	 * 
-	 * @throws FunctionalException
-	 *             Excepción lanzada si se presenta algún error en el proceso
-	 */
-    @Test
-	public void procesoPrestarLibroValido() {
-    	logger.debug("Inicio método procesoPrestarLibroValido");
-		String mensajeFinalizacion = "Fin método procesoPrestarLibroValido";
-    	ServicioBibliotecario servicioBibliotecario = null;
-    	Libro libro = null;
-    	
-		// arrange
-    	
-    	// Se crea el libro
-		libro = new LibroTestDataBuilder().conNombre(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA).build();
-		repositorioLibro.agregar(libro);
-		
-		// act
-		
-		// Se realiza el prestamo del libro
-		servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
-		servicioBibliotecario.prestar(libro.getIsbn(),BibliotecaConstantes.USUARIO_UNO);
-
-		// assert
-		
-		// Se verifica el que libro se encuentre debidamente prestado
-		Assert.assertTrue(servicioBibliotecario.libroEsPrestado(libro.getIsbn()));
-		Assert.assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
-
-		logger.debug(mensajeFinalizacion);
-	}
+   
 
     /**
    	 * Método encargado de ejecutar la prueba unitaria de la implementación 
@@ -211,11 +168,13 @@ public class ServicioBibliotecarioTest {
     	Libro libro = null;
     	
 		// arrange
+        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
+        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
     	
     	// Se crea el libro
 		libro = new LibroTestDataBuilder().conNombre(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA).build();
 		repositorioLibro.agregar(libro);
-		
 		
 		// act
 		
@@ -254,6 +213,9 @@ public class ServicioBibliotecarioTest {
     	Libro libro = null;
     	
 		// arrange
+        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
+        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
 		
 		// Se crea el libro
 		libro = new LibroTestDataBuilder().conisbn(BibliotecaConstantes.IDENTIFICADOR_ISBN_PALINDROMO).build(); 
@@ -265,6 +227,231 @@ public class ServicioBibliotecarioTest {
 		servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
 		servicioBibliotecario.prestar(libro.getIsbn(), BibliotecaConstantes.USUARIO_UNO);
 		
+		logger.debug(mensajeFinalizacion);
+	}
+	
+	/**
+	 * Método encargado de ejecutar la prueba unitaria de la implementación 
+	 * que realiza el proceso de prestamo de libros para 
+	 * el sistema de biblioteca
+	 * 
+	 * En este Test: Se realiza la creacion de un nuevo libro y posteriormente 
+	 * se crea el prestamo del mismo.
+	 * 
+	 * Resultado esperado: Que se valide si el libro se encuentre efectivamente 
+	 * prestado 
+	 * 
+	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * 
+	 * @author hhernandez
+	 * 
+	 * @throws FunctionalException
+	 *             Excepción lanzada si se presenta algún error en el proceso
+	 */
+    /*@Test
+	public void procesoPrestarLibroValido() {
+    	logger.debug("Inicio método procesoPrestarLibroValido");
+		String mensajeFinalizacion = "Fin método procesoPrestarLibroValido";
+    	ServicioBibliotecario servicioBibliotecario = null;
+    	Libro libro = null;
+    	
+		// arrange
+        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
+        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
+    	
+    	// Se crea el libro
+		libro = new LibroTestDataBuilder().conNombre(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA).build();
+		repositorioLibro.agregar(libro);
+		
+		// act
+		
+		// Se realiza el prestamo del libro
+		servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
+		servicioBibliotecario.prestar(libro.getIsbn(),BibliotecaConstantes.USUARIO_UNO);
+
+		// assert
+		
+		// Se verifica el que libro se encuentre debidamente prestado
+		Assert.assertTrue(servicioBibliotecario.libroEsPrestado(libro.getIsbn()));
+		Assert.assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
+
+		logger.debug(mensajeFinalizacion);
+	}*/
+	
+	/**
+	 * Método encargado de ejecutar la prueba unitaria de la implementación 
+	 * que realiza el proceso de prestamo de libros para 
+	 * el sistema de biblioteca
+	 * 
+	 * En este Test: Se realiza la creacion de un nuevo libro con 
+	 * identificador de ISBN superior al limite definido por 
+	 * negocio igual a 30 y posteriormente se crea el prestamo del mismo.
+	 * 
+	 * Resultado esperado: Que se valide que el prestamo del libro 
+	 * genere fecha de entrega asociada al libro prestado 
+	 * 
+	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * 
+	 * @author hhernandez
+	 * 
+	 * @throws FunctionalException
+	 *             Excepción lanzada si se presenta algún error en el proceso
+	 */
+	/*@Test
+	public void procesoPrestarLibroConFechaDeEntregaDefinida() {
+		logger.debug("Inicio método procesoPrestarLibroConFechaDeEntregaDefinida");
+		String mensajeFinalizacion = "Fin método procesoPrestarLibroConFechaDeEntregaDefinida";
+		ServicioBibliotecario servicioBibliotecario = null;
+    	Libro libro = null;
+		Prestamo prestamo = null;
+    	
+    	// arrange
+        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
+        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
+        
+		// Se crea el libro
+		libro = new LibroTestDataBuilder().conisbn(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR)
+				.conNombre(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA).build();
+		repositorioLibro.agregar(libro);
+
+		// act
+
+		// Se intenta realizar el prestamo del libro palindromo
+		servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
+		servicioBibliotecario.prestar(libro.getIsbn(), BibliotecaConstantes.USUARIO_UNO);
+
+		// se obtiene el prestamo con el libro asociado en el caso de prueba
+		prestamo = repositorioPrestamo.obtener(libro.getIsbn());
+
+		// assert
+
+		// Se verifica que sea el mismo libro
+		Assert.assertEquals(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA, prestamo.getLibro().getTitulo());
+		Assert.assertEquals(BibliotecaConstantes.USUARIO_UNO, prestamo.getNombreUsuario());
+		Assert.assertNotNull(prestamo.getFechaSolicitud());
+		// Se verifica la fecha de entrega que exista
+		Assert.assertNotNull(prestamo.getFechaEntregaMaxima());
+
+		logger.debug(mensajeFinalizacion);
+	}*/
+	
+	/**
+	 * Método encargado de ejecutar la prueba unitaria de la implementación 
+	 * que realiza el proceso de prestamo de libros para 
+	 * el sistema de biblioteca
+	 * 
+	 * En este Test: Se realiza la creacion de un nuevo libro con 
+	 * identificador de ISBN inferior al limite definido por 
+	 * negocio igual a 30 y posteriormente se crea el prestamo del mismo.
+	 * 
+	 * Resultado esperado: Que se valide que el prestamo del libro 
+	 * genere fecha de entrega asociada al libro prestado 
+	 * 
+	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * 
+	 * @author hhernandez
+	 * 
+	 * @throws FunctionalException
+	 *             Excepción lanzada si se presenta algún error en el proceso
+	 */
+	/*@Test
+	public void procesoPrestarLibroSinFechaDeEntregaDefinida() {
+		logger.debug("Inicio método procesoPrestarLibroSinFechaDeEntregaDefinida");
+		String mensajeFinalizacion = "Fin método procesoPrestarLibroSinFechaDeEntregaDefinida";
+		ServicioBibliotecario servicioBibliotecario = null;
+    	Libro libro = null;
+		Prestamo prestamo = null;
+    	
+    	// arrange
+        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
+        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
+
+		// Se crea el libro
+		libro = new LibroTestDataBuilder().conisbn(BibliotecaConstantes.IDENTIFICADOR_ISBN_MENOR)
+				.conNombre(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA).build();
+		repositorioLibro.agregar(libro);
+
+		// act
+
+		// Se intenta realizar el prestamo del libro palindromo
+		servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
+		servicioBibliotecario.prestar(libro.getIsbn(), BibliotecaConstantes.USUARIO_UNO);
+
+		// se obtiene el prestamo con el libro asociado en el caso de prueba
+		prestamo = repositorioPrestamo.obtener(libro.getIsbn());
+
+		// assert
+
+		// Se verifica que sea el mismo libro
+		Assert.assertEquals(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA, prestamo.getLibro().getTitulo());
+		Assert.assertEquals(BibliotecaConstantes.USUARIO_UNO, prestamo.getNombreUsuario());
+		Assert.assertNotNull(prestamo.getFechaSolicitud());
+		// Se verifica la fecha de entrega no exista
+		Assert.assertNull(prestamo.getFechaEntregaMaxima());
+
+		logger.debug(mensajeFinalizacion);
+	}*/
+	
+	/**
+	 * Método encargado de ejecutar la prueba unitaria de la implementación 
+	 * que realiza el proceso de prestamo de libros para 
+	 * el sistema de biblioteca
+	 * 
+	 * En este Test: Se realiza la creacion de un nuevo libro y posteriormente 
+	 * se crea el prestamo del mismo.
+	 * 
+	 * Resultado esperado: Que se valide si el libro se encuentre efectivamente 
+	 * prestado 
+	 * 
+	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * 
+	 * @author hhernandez
+	 * 
+	 * @throws FunctionalException
+	 *             Excepción lanzada si se presenta algún error en el proceso
+	 */
+    @Test
+	public void procesoPrestarLibroValidoV2() {
+    	logger.debug("Inicio método procesoPrestarLibroValido");
+		String mensajeFinalizacion = "Fin método procesoPrestarLibroValido";
+    	ServicioBibliotecario servicioBibliotecario = null;
+    	Libro libro = null;
+    	
+		// arrange
+        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
+        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
+        // Se crea servicio
+		servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
+
+		// Se crean los mocks
+		libro = new LibroTestDataBuilder().conisbn(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR)
+				.conNombre(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA).build();
+		doReturn(libro).when(repositorioLibro).obtenerPorIsbn(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
+    	doReturn(null).when(repositorioPrestamo).obtenerLibroPrestadoPorIsbn(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
+
+      	// Se crea el mocks prestamo
+  		Prestamo prestamo = new Prestamo(libro);
+  		prestamo.setNombreUsuario(BibliotecaConstantes.USUARIO_UNO);
+  		prestamo.setFechaEntregaMaxima(
+  				servicioBibliotecario.calcularFechaEntregaLibro(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
+  		doReturn(prestamo).when(repositorioPrestamo).obtener(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
+
+		// act
+		
+		// Se realiza el prestamo del libro
+		servicioBibliotecario.prestar(libro.getIsbn(), BibliotecaConstantes.USUARIO_UNO);
+
+		// assert
+		
+		// Se verifica el que libro se encuentre debidamente prestado
+		doReturn(libro).when(repositorioPrestamo).obtenerLibroPrestadoPorIsbn(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
+		Assert.assertTrue(servicioBibliotecario.libroEsPrestado(libro.getIsbn()));
+		Assert.assertNotNull(repositorioPrestamo.obtenerLibroPrestadoPorIsbn(libro.getIsbn()));
+
 		logger.debug(mensajeFinalizacion);
 	}
 	
@@ -288,7 +475,7 @@ public class ServicioBibliotecarioTest {
 	 *             Excepción lanzada si se presenta algún error en el proceso
 	 */
 	@Test
-	public void procesoPrestarLibroConFechaDeEntregaDefinida() {
+	public void procesoPrestarLibroConFechaDeEntregaDefinidaV2() {
 		logger.debug("Inicio método procesoPrestarLibroConFechaDeEntregaDefinida");
 		String mensajeFinalizacion = "Fin método procesoPrestarLibroConFechaDeEntregaDefinida";
 		ServicioBibliotecario servicioBibliotecario = null;
@@ -296,16 +483,28 @@ public class ServicioBibliotecarioTest {
 		Prestamo prestamo = null;
     	
     	// arrange
+        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
+        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
+        // Se crea servicio
+        servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
 
-		// Se crea el libro
+        // Se crea el mock libro
 		libro = new LibroTestDataBuilder().conisbn(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR)
 				.conNombre(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA).build();
-		repositorioLibro.agregar(libro);
+      	doReturn(libro).when(repositorioLibro).obtenerPorIsbn(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
+    	doReturn(null).when(repositorioPrestamo).obtenerLibroPrestadoPorIsbn(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
+
+      	// Se crea el mocks prestamo
+  		prestamo = new Prestamo(libro);
+  		prestamo.setNombreUsuario(BibliotecaConstantes.USUARIO_UNO);
+  		prestamo.setFechaEntregaMaxima(
+  				servicioBibliotecario.calcularFechaEntregaLibro(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
+  		doReturn(prestamo).when(repositorioPrestamo).obtener(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MAYOR));
 
 		// act
 
 		// Se intenta realizar el prestamo del libro palindromo
-		servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
 		servicioBibliotecario.prestar(libro.getIsbn(), BibliotecaConstantes.USUARIO_UNO);
 
 		// se obtiene el prestamo con el libro asociado en el caso de prueba
@@ -343,7 +542,7 @@ public class ServicioBibliotecarioTest {
 	 *             Excepción lanzada si se presenta algún error en el proceso
 	 */
 	@Test
-	public void procesoPrestarLibroSinFechaDeEntregaDefinida() {
+	public void procesoPrestarLibroSinFechaDeEntregaDefinidaV2() {
 		logger.debug("Inicio método procesoPrestarLibroSinFechaDeEntregaDefinida");
 		String mensajeFinalizacion = "Fin método procesoPrestarLibroSinFechaDeEntregaDefinida";
 		ServicioBibliotecario servicioBibliotecario = null;
@@ -351,11 +550,22 @@ public class ServicioBibliotecarioTest {
 		Prestamo prestamo = null;
     	
     	// arrange
+        RepositorioPrestamo repositorioPrestamo = mock(RepositorioPrestamo.class);
+        RepositorioLibro repositorioLibro = mock(RepositorioLibro.class);
+        RepositorioFestivo repositorioFestivo = mock(RepositorioFestivo.class);
+        // Se crea servicio
+        servicioBibliotecario = new ServicioBibliotecario(repositorioLibro, repositorioPrestamo, repositorioFestivo);
 
-		// Se crea el libro
+        // Se crea el mock libro
 		libro = new LibroTestDataBuilder().conisbn(BibliotecaConstantes.IDENTIFICADOR_ISBN_MENOR)
 				.conNombre(BibliotecaConstantes.NOMBRE_LIBRO_SU_DINERO_CUENTA).build();
-		repositorioLibro.agregar(libro);
+      	doReturn(libro).when(repositorioLibro).obtenerPorIsbn(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MENOR));
+    	doReturn(null).when(repositorioPrestamo).obtenerLibroPrestadoPorIsbn(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MENOR));
+
+      	// Se crea el mocks prestamo
+  		prestamo = new Prestamo(libro);
+  		prestamo.setNombreUsuario(BibliotecaConstantes.USUARIO_UNO);
+  		doReturn(prestamo).when(repositorioPrestamo).obtener(eq(BibliotecaConstantes.IDENTIFICADOR_ISBN_MENOR));
 
 		// act
 
