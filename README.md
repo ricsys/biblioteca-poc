@@ -3,7 +3,6 @@
 ![POD](https://img.shields.io/badge/platform-Ceiba-green.svg) 
 ![POD](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 [![codecov](https://codecov.io/gh/ricsys/biblioteca-poc/branch/master/graph/badge.svg?token=B2K7TCGQFM)](https://codecov.io/gh/ricsys/biblioteca-poc)
-https://travis-ci.com/ricsys/biblioteca-poc.svg?branch=master
 [![Build Status](https://travis-ci.com/ricsys/biblioteca-poc.svg?branch=master)](https://travis-ci.com/ricsys/biblioteca-poc)
 
 # biblioteca-poc
