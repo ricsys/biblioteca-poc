@@ -5,6 +5,7 @@
 [![codecov](https://codecov.io/gh/ricsys/biblioteca-poc/branch/master/graph/badge.svg?token=B2K7TCGQFM)](https://codecov.io/gh/ricsys/biblioteca-poc)
 [![Build Status](https://travis-ci.com/ricsys/biblioteca-poc.svg?branch=master)](https://travis-ci.com/ricsys/biblioteca-poc)
 [![POD](https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg)](https://ceiba-biblioteca.herokuapp.com/swagger-ui.html)
+<br>
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/dashboard?id=ricsys_biblioteca-poc)
 
 # biblioteca-poc
