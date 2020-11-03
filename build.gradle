@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 	id 'jacoco'
+	id "org.sonarqube" version "3.0"
 }
 
 repositories {
@@ -36,3 +37,11 @@ jacocoTestReport {
 	}
 }
 check.dependsOn jacocoTestReport
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "ricsys_biblioteca-poc"
+    property "sonar.organization", "ricsys"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
