@@ -7,4 +7,4 @@
 [![POD](https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg)](https://ceiba-biblioteca.herokuapp.com/swagger-ui.html)
 
 # biblioteca-poc
-This is a sample library management system api, as proof of concept for using springboot, swagger, lombok and unit testing for java
+This is a sample library management system api, as proof of concept for using springboot, swagger and unit testing for java
