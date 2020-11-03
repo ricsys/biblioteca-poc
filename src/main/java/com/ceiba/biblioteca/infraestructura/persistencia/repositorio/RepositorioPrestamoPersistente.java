@@ -70,7 +70,7 @@ public class RepositorioPrestamoPersistente implements RepositorioPrestamo {
    	 * Método encargado de realizar la conversion de la estructura DTO <code>Prestamo</code>
    	 * al domino <code>PrestamoEntity</code> para ser manejada
    	 * 
-   	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+   	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
    	 * 
    	 * @author hhernandez
    	 * 

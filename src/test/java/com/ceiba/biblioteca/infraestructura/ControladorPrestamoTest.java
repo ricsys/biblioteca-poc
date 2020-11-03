@@ -58,7 +58,7 @@ public class ControladorPrestamoTest {
 	 * Resultado esperado: Que el servicio retorne el codigo HTTP OK al 
 	 * generarse el proceso de manera satisfactoria
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -89,7 +89,7 @@ public class ControladorPrestamoTest {
 	 * Resultado esperado: Que se genere el error esperado ya que el libro 
 	 * no se encuentra creado con anterioridad
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

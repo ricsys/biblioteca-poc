@@ -7,7 +7,7 @@ import com.ceiba.biblioteca.infraestructura.persistencia.entidad.FestivoEntity;
  * <b>Descripción:</b>Clase encargada que define el creador de objetos de tipo 
  * <code>Festivo</code> para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -24,7 +24,7 @@ public final class FestivoBuilder {
     /**
      * Método utilitario para convertir la entidad al dominio especifico
      * 
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
      * 
@@ -46,11 +46,12 @@ public final class FestivoBuilder {
     /**
      * Método utilitario para convertir el dominio especifico a la entidad
      * 
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
      * 
-     * @param  <code>Festivo</code>
+     * @param  festivo
+     * 			<code>Festivo</code>
      * 			El registro del dia festivo
      * 
      * @return festivoEntity

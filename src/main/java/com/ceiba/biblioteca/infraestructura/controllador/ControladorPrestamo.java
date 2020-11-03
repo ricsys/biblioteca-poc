@@ -16,7 +16,7 @@ import com.ceiba.biblioteca.dominio.Prestamo;
  * <b>Descripción:</b>Clase encargada que define el controlador o endpoint
  * que gestiona del proceso de prestamo de libro para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -60,7 +60,7 @@ public class ControladorPrestamo {
      * servicio que exponela ejecucion del proceso de prestamo 
 	 * de libro asociado a un usuario
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -68,12 +68,10 @@ public class ControladorPrestamo {
 	 * 			<code>String</code>
 	 * 			El identificador único para el libro a prestar
 	 * 
-	 * @param nombreUsuario
+	 * @param nombreCliente
 	 * 			<code>String</code>
 	 * 			El nombre del usuario de la biblioteca o cliente
 	 * 
-	 * @throws Exception 
-	 * 			Si se presento un error en el proceso de prestamo del libro
 	 */
     @PostMapping("/{isbn}/{nombreCliente}")
 	public void prestar(@PathVariable(name = "isbn") String isbn,
@@ -88,7 +86,7 @@ public class ControladorPrestamo {
      * servicio que expone la ejecucion del proceso de obtener un libro 
      * prestado asociado a un ISBN
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

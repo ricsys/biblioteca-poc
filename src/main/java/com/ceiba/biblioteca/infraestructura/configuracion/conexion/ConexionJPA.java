@@ -11,7 +11,7 @@ import com.ceiba.biblioteca.constantes.BibliotecaConstantes;
  * persistencia para apoyar las operaciones en las pruebas unitarias
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -27,7 +27,7 @@ public class ConexionJPA {
     /**
      * Consturctor de la clase
      * 
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 */

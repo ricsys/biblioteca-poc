@@ -15,7 +15,7 @@ import com.ceiba.biblioteca.utils.BibliotecaUtil;
  * que gestiona la ejecucion del proceso para obtener un prestamo
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -49,7 +49,7 @@ public class ServicioObtenerPrestamo {
    	 * metodo encargado de realizar el proceso de obtener un prestamo asociado 
    	 * a un libro indicado por el ISBN, para el sistema de biblioteca
    	 * 
-   	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+   	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
    	 * 
    	 * @author hhernandez
    	 * 
@@ -57,8 +57,8 @@ public class ServicioObtenerPrestamo {
 	 * 			<code>String</code>
 	 * 			El identificador único para el libro a prestar
    	 * 
-   	 * @throws Exception 	
-   	 * 			Si se presenta un error en el proceso de consulta del prestamo
+   	 *  @return <code>Prestamo</code>
+   	 * 			El prestamo consultado
    	 */
     public Prestamo ejecutar(String isbn) {
     	logger.debug("Inicio método ejecutar");
@@ -81,7 +81,7 @@ public class ServicioObtenerPrestamo {
    	 * Método encargado de realizar la consulta de un prestamo 
    	 * asociado a un libro por ISBN
    	 * 
-   	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+   	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
    	 * 
    	 * @author hhernandez
    	 * 

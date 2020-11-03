@@ -10,7 +10,7 @@ import com.ceiba.biblioteca.dominio.Festivo;
  * que gestiona las operaciones sobre la parametrizacion de dias festivos
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -22,7 +22,7 @@ public interface RepositorioFestivo {
      * Metodo que permite definir la operación de consulta  
      * por fecha en la parametrizacion de dias festivos
      *
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez 
      

@@ -4,7 +4,7 @@ package com.ceiba.biblioteca.dominio.excepcion;
  * <b>Descripción:</b>Clase encargada que define el tipo de excepcion 
  * para el manejo del concepto de negocio Libro para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -21,6 +21,8 @@ public class LibroException extends RuntimeException {
 	 * Constructor de la clase
 	 * 
 	 * @param message
+	 * 			<code>String</code>
+	 * 			El mensaje de error
 	 */
 	public LibroException(String message) {
         super(message);

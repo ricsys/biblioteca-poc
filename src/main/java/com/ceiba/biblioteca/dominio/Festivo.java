@@ -6,7 +6,7 @@ import java.util.Date;
  * <b>Descripción:</b>Clase que define el dominio donde se parametriza 
  * la informacion relevante a dias Festivo para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -33,10 +33,16 @@ public class Festivo {
 	 * Constructor de la clase 
 	 * 
 	 * @param id
+	 * 			<code>Long</code>
+	 * 			El identificador del registro
 	 * 
 	 * @param concepto
+	 * 			<code>String</code>
+	 * 			El concepto de la fecha festiva
 	 * 
 	 * @param fecha
+	 * 			<code>Date</code>
+	 * 			La fecha que representa el dia festivo
 	 */
 	public Festivo(Long id, String concepto, Date fecha) {
 		this.id = id;
@@ -59,7 +65,7 @@ public class Festivo {
 	/**
      * Generación de método toString
      * 
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
      */
@@ -71,7 +77,7 @@ public class Festivo {
 	/**
      * Generación de método hashCode
      * 
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
      */
@@ -88,7 +94,7 @@ public class Festivo {
 	/**
      * Generación de método equals
      * 
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
      */

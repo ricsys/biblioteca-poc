@@ -20,7 +20,7 @@ import com.ceiba.biblioteca.infraestructura.persistencia.entidad.FestivoEntity;
  * que implementa las operaciones sobre la administracion de los dias festivos 
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -52,6 +52,8 @@ public class RepositorioFestivoPersistente implements RepositorioFestivo {
 	 * Constructor de la clase
 	 * 
 	 * @param entityManager
+	 * 			<code>EntityManager</code>
+	 * 			la referencia del contexto de persistencia
 	 */
 	public RepositorioFestivoPersistente(EntityManager entityManager) {
 		this.entityManager = entityManager;
@@ -70,7 +72,7 @@ public class RepositorioFestivoPersistente implements RepositorioFestivo {
      * Metodo que permite definir la operación de consulta  
      * por fecha en la parametrizacion de dias festivos
      *
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez 
      

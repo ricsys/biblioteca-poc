@@ -10,7 +10,7 @@ import com.ceiba.biblioteca.dominio.servicio.bibliotecario.ServicioBibliotecario
  * para aplicar la ejecucion del proceso de prestamo de libro 
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -28,6 +28,8 @@ public class ManejadorGenerarPrestamo {
 	 * Constructor de la clase 
 	 * 
 	 * @param servicioBibliotecario
+	 * 			<code>ServicioBibliotecario</code>
+	 * 			El servicio que gestiona el bibliotecario
 	 */
 	public ManejadorGenerarPrestamo(ServicioBibliotecario servicioBibliotecario) {
 		this.servicioBibliotecario = servicioBibliotecario;
@@ -37,7 +39,7 @@ public class ManejadorGenerarPrestamo {
 	 * Método que permite realizar la ejecucion del proceso de prestamo 
 	 * de libro asociado a un usuario
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

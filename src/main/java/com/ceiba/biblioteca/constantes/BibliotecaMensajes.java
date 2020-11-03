@@ -4,7 +4,7 @@ package com.ceiba.biblioteca.constantes;
  * <b>Descripción:</b>Clase encargada que define los mensajes usados
  * en el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 

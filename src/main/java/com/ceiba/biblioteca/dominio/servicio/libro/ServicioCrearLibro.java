@@ -16,7 +16,7 @@ import com.ceiba.biblioteca.utils.BibliotecaUtil;
  * que gestiona la ejecucion del proceso para la creacion de un libro 
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -50,16 +50,13 @@ public class ServicioCrearLibro {
 	 * metodo encargado de realizar el proceso de creacion de libros
 	 * para el sistema de biblioteca
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
 	 * @param libro
 	 * 			<code>Libro</code>
 	 * 			El Libro a crear
-	 * 
-	 * @throws Exception 	
-	 * 			Si se presenta un error en el proceso de creacion de un libro
 	 */
     public void ejecutar(Libro libro) {
     	logger.debug("Inicio método ejecutar");
@@ -80,7 +77,7 @@ public class ServicioCrearLibro {
     /**
 	 * Método encargado de realizar la consulta de un libro por ISBN
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -105,7 +102,7 @@ public class ServicioCrearLibro {
 	/**
 	 * Método encargado de realizar la creacion de un libro
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

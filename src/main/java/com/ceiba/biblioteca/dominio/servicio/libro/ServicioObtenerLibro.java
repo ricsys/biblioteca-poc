@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  * que gestiona la ejecucion del proceso para obtener un libro 
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -50,16 +50,16 @@ public class ServicioObtenerLibro {
 	 * metodo encargado de realizar el proceso de obtener un libro
 	 * para el sistema de biblioteca
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
-	 * @param libro
-	 * 			<code>Libro</code>
-	 * 			El Libro a crear
+	 * @param isbn
+	 * 			<code>String</code>
+	 * 			El ISBN del libro a consultar
 	 * 
-	 * @throws Exception 	
-	 * 			Si se presenta un error en el proceso de creacion de un libro
+	 * @return <code>Libro</code>
+	 * 			El libro consultado
 	 */
     public Libro ejecutar(String isbn) {
     	logger.debug("Inicio método ejecutar");
@@ -81,7 +81,7 @@ public class ServicioObtenerLibro {
     /**
    	 * Método encargado de realizar la consulta de un libro por ISBN
    	 * 
-   	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+   	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
    	 * 
    	 * @author hhernandez
    	 * 

@@ -23,7 +23,7 @@ import com.ceiba.biblioteca.utils.BibliotecaUtil;
  * que gestiona la ejecucion del proceso de prestamo de libro 
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -77,7 +77,7 @@ public class ServicioBibliotecario {
 	 * metodo encargado de realizar el proceso de prestamo de libros
 	 * para el sistema de biblioteca
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -124,7 +124,7 @@ public class ServicioBibliotecario {
 	/**
 	 * Método encargado de realizar la consulta de un libro por ISBN
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -149,7 +149,7 @@ public class ServicioBibliotecario {
 	/**
 	 * Método encargado de realizar las validaciones de negocio requeridas
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -180,7 +180,7 @@ public class ServicioBibliotecario {
 	/**
 	 * Método encargado de realizar el proceso de prestamo de libro
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 *<b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -213,7 +213,7 @@ public class ServicioBibliotecario {
 	/**
 	 * Método encargado de verificar si el libro indicado se encuentra prestado o no
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -243,7 +243,7 @@ public class ServicioBibliotecario {
 	 * Método que se encarga de calcular la fecha de entrega 
 	 * del libro en base al identificador ISBN
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 
@@ -279,12 +279,13 @@ public class ServicioBibliotecario {
 	 * Método que se encarga de calcular la fecha de entrega 
 	 * del libro en base a los dias de devolucion parametrizados en el sistema
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
 	 * @param numeroDeDias
-	 * 		  <code></code>
+	 * 		  <code>int</code>
+	 * 			El numero de días
 	 *
 	 * @return 	<code>Date</code>
 	 * 			 la fecha de entrega del libro calculada
@@ -343,7 +344,7 @@ public class ServicioBibliotecario {
 	 * Método encargado de realizar la consulta por fecha 
 	 * en la parametrizacion de dias festivos
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

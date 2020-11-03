@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
  * <b>Descripción:</b>Clase que define la entidad donde se parametriza 
  * la informacion relevante a dias Festivo para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 

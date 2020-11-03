@@ -28,7 +28,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * endpoint que gestiona las operaciones sobre los libros 
  * para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -89,7 +89,7 @@ public class ControladorLibroTest {
 	 * Resultado esperado: Que se genere el error esperado ya que el libro se encuentre 
 	 * no se encuentra creado con anterioridad
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -120,7 +120,7 @@ public class ControladorLibroTest {
 	 * Resultado esperado: Que se genere el error esperado ya que el libro se encuentre 
 	 * creado con anterioridad
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

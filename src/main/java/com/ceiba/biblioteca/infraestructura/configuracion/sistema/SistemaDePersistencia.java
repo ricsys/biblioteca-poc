@@ -30,7 +30,7 @@ public class SistemaDePersistencia {
      * Método que permite obtenerla referencia al repositorio que gestiona 
      * las operaciones sobre la parametrizacion de festivos para el sistema de biblioteca
      * 
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

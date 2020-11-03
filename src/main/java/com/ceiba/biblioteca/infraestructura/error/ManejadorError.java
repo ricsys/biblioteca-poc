@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * las diferentes excepciones de negocio que se pueden presentar para 
  * el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -43,7 +43,7 @@ public class ManejadorError extends ResponseEntityExceptionHandler {
     /**
      * Método encargado de manejar las excepciones del sistema de biblioteca
      * 
-     * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+     * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
      * 
@@ -51,7 +51,7 @@ public class ManejadorError extends ResponseEntityExceptionHandler {
      * 			<code>Exception</code>
      *			La excepcion capturada 
      * 
-     * @return <code>ResponseEntity<Error></code>
+     * @return <code>ResponseEntity</code>
      * 			El objeto respuesta para devolver el enpoint solicitado
      */
     @ExceptionHandler(Exception.class)

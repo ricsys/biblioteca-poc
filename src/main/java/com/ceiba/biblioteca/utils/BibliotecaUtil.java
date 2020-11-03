@@ -14,7 +14,7 @@ import com.ceiba.biblioteca.constantes.BibliotecaMensajes;
  * <b>Descripción:</b>Clase utilitaria con diversas funcionlaidades 
  * de soporte al sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -28,10 +28,10 @@ public class BibliotecaUtil {
 	private static Logger logger = LoggerFactory.getLogger(BibliotecaUtil.class.getName());
 	
 	/**
-	 * Metodo que permite lanzar una excepción de tipo {@link TechnicalException} con el
+	 * Metodo que permite lanzar una excepción de tipo <code>TechnicalException</code> con el
 	 * mensaje de validación retornado.
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
  	 * 
@@ -57,7 +57,7 @@ public class BibliotecaUtil {
 	 * Método encargado de verificar si el ISBN del libro esta compuesto 
 	 * por una palabra palindroma
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -81,9 +81,9 @@ public class BibliotecaUtil {
 	 * Método que permite realizar la conversion de un <code>LocalDate</code> a
 	 * <code>Date</code>
 	 * 
-	 * {@link https://beginnersbook.com/2017/10/java-convert-localdate-to-date/}
+	 * {@link} https://beginnersbook.com/2017/10/java-convert-localdate-to-date/
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

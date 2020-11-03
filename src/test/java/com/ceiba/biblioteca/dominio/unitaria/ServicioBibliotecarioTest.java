@@ -31,7 +31,7 @@ import com.ceiba.biblioteca.testdatabuilder.LibroTestDataBuilder;
  * <b>Descripción:</b>Clase encargada que define las pruebas unitarias para el 
  * servicio que gestiona los prestamos de libros para el sistema de biblioteca
  * 
- * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+ * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
  * 
  * @author hhernandez
  * 
@@ -67,7 +67,7 @@ public class ServicioBibliotecarioTest {
 	/**
 	 * Método que permite la configuracion antes de la ejecución de un caso de prueba
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 */
@@ -87,7 +87,7 @@ public class ServicioBibliotecarioTest {
 	 * Método que permite deshacer la configuracion posterior a la ejecución 
 	 * de un caso de prueba
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 */
@@ -153,7 +153,7 @@ public class ServicioBibliotecarioTest {
    	 * Resultado esperado: Que se genere el error esperado al intentar prestar 
    	 * el mismo libro a otro usuario
    	 * 
-   	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+   	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
    	 * 
    	 * @author hhernandez
    	 * 
@@ -198,7 +198,7 @@ public class ServicioBibliotecarioTest {
    	 * Resultado esperado: Que se genere el error esperado al intentar prestar 
    	 * el libro con ISBN palindromo
    	 * 
-   	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+   	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
    	 * 
    	 * @author hhernandez
    	 * 
@@ -241,7 +241,7 @@ public class ServicioBibliotecarioTest {
 	 * Resultado esperado: Que se valide si el libro se encuentre efectivamente 
 	 * prestado 
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -291,7 +291,7 @@ public class ServicioBibliotecarioTest {
 	 * Resultado esperado: Que se valide que el prestamo del libro 
 	 * genere fecha de entrega asociada al libro prestado 
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -349,7 +349,7 @@ public class ServicioBibliotecarioTest {
 	 * Resultado esperado: Que se valide que el prestamo del libro 
 	 * genere fecha de entrega asociada al libro prestado 
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -406,7 +406,7 @@ public class ServicioBibliotecarioTest {
 	 * Resultado esperado: Que se valide si el libro se encuentre efectivamente 
 	 * prestado 
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -467,7 +467,7 @@ public class ServicioBibliotecarioTest {
 	 * Resultado esperado: Que se valide que el prestamo del libro 
 	 * genere fecha de entrega asociada al libro prestado 
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 
@@ -534,7 +534,7 @@ public class ServicioBibliotecarioTest {
 	 * Resultado esperado: Que se valide que el prestamo del libro 
 	 * genere fecha de entrega asociada al libro prestado 
 	 * 
-	 * <b>Caso de Uso:<b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
+	 * <b>Caso de Uso:</b> Prueba Tecnica Ingreso Ceiba - Ejercicio bibliotecario
 	 * 
 	 * @author hhernandez
 	 * 

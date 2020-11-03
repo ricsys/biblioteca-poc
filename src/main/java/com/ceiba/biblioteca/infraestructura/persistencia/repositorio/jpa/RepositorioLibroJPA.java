@@ -8,7 +8,11 @@ public interface RepositorioLibroJPA {
      * Permite obtener un libro entity por un isbn
      *
      * @param isbn
-     * @return
+     * 			<code>String</code>
+     * 			El identificador de ISBN del libro
+     * 
+     * @return <code>LibroEntity</code>
+     * 			La entidad libro consultada
      */
     LibroEntity obtenerLibroEntityPorIsbn(String isbn);
 
